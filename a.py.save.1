@@ -1,0 +1,15 @@
+import numpy as np
+from PIL import Image as im
+
+img = im.open("a.jpeg")
+print (type(img))
+img = np.array(img)
+print (type(img))
+print (img.shape)
+
+for i in img:
+	for j in img:
+		for k in img:
+			if img[i,j,k] % 3 == 0:
+				a[i,j,k]=0
+
